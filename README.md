@@ -28,7 +28,7 @@ The main dataset contains student-level variables related to lifestyle and acade
 - GPA or academic performance indicator
 
 ### External Dataset
-- [Source: https://s](https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/lifesat/oecd_bli_2015.csv)
+https://s](https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/lifesat/oecd_bli_2015.csv
 An external dataset is used to enrich the project with additional well-being context. This external data supports a broader interpretation of behavioral patterns and helps strengthen the overall analysis.
 
 ## Data Enrichment
