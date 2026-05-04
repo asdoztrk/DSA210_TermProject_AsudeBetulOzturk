@@ -1,39 +1,42 @@
-# GPA Prediction from Student Lifestyle and Well-being Data
+# GPA Prediction from Student Lifestyle and Academic Data
 
 ## Project Description
+The aim of this project is to develop machine learning models to predict students' academic performance based on lifestyle, behavioral, and academic factors.
 
-The aim of this project is to develop a machine learning model to predict students' GPA based on lifestyle, behavioral, and well-being related variables. The project explores how factors such as study time, sleep duration, stress, and other daily habits may influence academic performance.
-
-In addition to the primary student dataset, an external dataset is included to enrich the analysis and provide broader context for student well-being. This helps reduce the limitations of relying on a single dataset.
+The project analyzes how variables such as study habits, stress level, sleep patterns, and academic history influence student performance.
 
 ## Research Question
-
-Can student GPA be predicted using lifestyle and behavioral factors such as sleep duration, study habits, stress level, and well-being indicators?
+Can student academic performance be predicted using lifestyle, behavioral, and academic factors?
 
 ## Motivation
+Academic performance is influenced by multiple interconnected factors, including daily habits and prior academic achievements. 
 
-Academic performance is influenced by many interconnected factors beyond classroom performance alone. By studying student lifestyle patterns together with broader well-being indicators, this project aims to better understand which variables are most informative for GPA prediction.
+This project aims to identify the most important predictors of student performance and to understand how different types of data (lifestyle vs. academic records) affect model performance.
 
 ## Datasets
 
-### Primary Dataset
-Student Lifestyle Dataset (Kaggle):
+### 1. Student Lifestyle Dataset (Kaggle)
 https://www.kaggle.com/code/prernapriya52/student-lifestyle-dataset
-The main dataset contains student-level variables related to lifestyle and academic behavior, such as:
 
-- study hours
-- sleep duration
-- stress level
-- daily habits
-- GPA or academic performance indicator
+This dataset includes student-level lifestyle variables such as:
+- Study hours
+- Sleep duration
+- Stress level
+- Social and physical activities
+- GPA (target variable)
 
-### External Dataset
-https://s](https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/lifesat/oecd_bli_2015.csv
-An external dataset is used to enrich the project with additional well-being context. This external data supports a broader interpretation of behavioral patterns and helps strengthen the overall analysis.
+### 2. Student Performance Dataset (UCI)
+https://archive.ics.uci.edu/ml/datasets/Student+Performance
 
-## Data Enrichment
+This dataset includes academic and demographic variables such as:
+- Study time
+- Absences
+- Family background
+- Social behavior
+- Previous grades (G1, G2)
+- Final grade (G3 - target variable)
 
-The project does not rely only on feature engineering within a single dataset. Instead, it incorporates an additional external dataset to enrich the analysis. This enrichment is intended to improve the explanatory value of the project and align the dataset design with real-world behavioral analysis.
+> Note: The datasets are analyzed separately and are not merged, as they represent different student populations.
 
 ## Methodology
 
@@ -55,20 +58,49 @@ Initial exploratory analysis will be conducted to understand:
 - correlations among numerical variables
 - possible patterns that can guide feature selection
 
-## Hypotheses
+## Hypothesis Testing
 
-Some initial hypotheses of the project are:
+Statistical tests were conducted to validate relationships observed during EDA, including:
 
-- Students who sleep longer tend to have higher GPA
-- Students who study more tend to have higher GPA
-- Higher stress levels are associated with lower GPA
-- Well-being related indicators may improve GPA prediction performance
+- Correlation analysis (Pearson)  
+- t-tests  
+- ANOVA  
+
+Key findings:
+- Study hours have a strong positive effect on GPA  
+- Stress level significantly affects GPA  
+- Some variables (e.g., sleep, absences) were not statistically significant
 
 ## Machine Learning Models
 
-Since behavioral data may contain non-linear relationships, the project will compare multiple models instead of relying on a single simple baseline.
+Three regression models were implemented and compared:
 
-Planned models include:
-- Linear Regression as a baseline
+- Linear Regression (baseline)
 - Random Forest Regressor
 - XGBoost Regressor
+
+## Results
+
+### Lifestyle Dataset (GPA Prediction)
+- Linear Regression performed best  
+- Indicates mostly linear relationships between variables  
+
+### Student Performance Dataset (G3 Prediction)
+- Random Forest performed best  
+- Indicates more complex and non-linear relationships  
+
+## Key Insights
+
+- Model performance depends on dataset structure  
+- Simpler models can outperform complex ones when relationships are linear  
+- More complex models are beneficial when data contains non-linear patterns  
+
+This highlights the importance of selecting models based on data characteristics rather than model complexity.
+
+
+## Limitations
+
+- Datasets represent different student groups  
+- Results may not generalize to all populations  
+- Some datasets are relatively small 
+
