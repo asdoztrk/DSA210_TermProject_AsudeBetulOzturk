@@ -180,6 +180,34 @@ The project was developed using Python and the following libraries:
 
 ---
 
+# How to Reproduce
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/asdoztrk/DSA210_TermProject_AsudeBetulOzturk.git
+```
+
+2. Install the required dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run `EDAandHypothesisTesting.ipynb` for:
+- Exploratory Data Analysis (EDA)
+- Statistical hypothesis testing
+- Data visualization
+
+4. Run `ML_Modeling.ipynb` for:
+- Data preprocessing
+- Machine learning model training
+- GPA prediction
+- Model evaluation and comparison
+- Feature importance analysis
+
+---
+
 # AI Usage Disclosure
 
 AI tools such as ChatGPT were used for:
