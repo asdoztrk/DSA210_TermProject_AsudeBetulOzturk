@@ -132,17 +132,29 @@ The models were evaluated using:
 
 # Results and Findings
 
-## Student Lifestyle Dataset
+## Model Performance Comparison
 
-The results showed that Linear Regression achieved the best overall performance on the lifestyle dataset.
+### Student Lifestyle Dataset
 
-This suggests that relationships between lifestyle-related variables and GPA were mostly linear. Variables such as study hours and stress level appeared to have direct effects on academic performance.
+| Model | MAE | MSE | R² Score |
+|---|---|---|---|
+| Linear Regression | 0.164 | 0.042 | 0.547 |
+| Random Forest | 0.180 | 0.050 | 0.461 |
+| XGBoost | 0.195 | 0.061 | 0.349 |
 
-## Student Performance Dataset
+The results showed that Linear Regression achieved the strongest performance on the lifestyle dataset. This suggests that relationships between lifestyle-related variables and GPA were mostly linear.
 
-For the Student Performance dataset, Random Forest achieved the highest R² score among the tested models.
+---
 
-This indicates that the dataset contains more complex and non-linear relationships between variables. Previous grades, study time, and academic history were among the most influential predictors.
+### Student Performance Dataset
+
+| Model | MAE | MSE | R² Score |
+|---|---|---|---|
+| Linear Regression | 1.647 | 5.657 | 0.724 |
+| Random Forest | 1.165 | 3.798 | 0.815 |
+| XGBoost | 1.196 | 4.552 | 0.778 |
+
+For the Student Performance dataset, Random Forest achieved the highest R² score among the tested models. This indicates that the dataset contains more complex and non-linear relationships between variables.
 
 ## Overall Findings
 
