@@ -1,34 +1,57 @@
 # GPA Prediction from Student Lifestyle and Academic Data
 
-## Project Description
-The aim of this project is to develop machine learning models to predict students' academic performance based on lifestyle, behavioral, and academic factors.
+## Project Overview
 
-The project analyzes how variables such as study habits, stress level, sleep patterns, and academic history influence student performance.
+This project investigates whether student academic performance can be predicted using lifestyle, behavioral, and academic factors.
 
-## Research Question
+Different machine learning models were trained and compared on two separate student-related datasets to analyze how factors such as study habits, stress levels, sleep patterns, and previous academic performance influence GPA prediction.
+
+---
+
+# Research Question
+
 Can student academic performance be predicted using lifestyle, behavioral, and academic factors?
 
-## Motivation
-Academic performance is influenced by multiple interconnected factors, including daily habits and prior academic achievements. 
+---
 
-This project aims to identify the most important predictors of student performance and to understand how different types of data (lifestyle vs. academic records) affect model performance.
+# Motivation
 
-## Datasets
+Academic performance is influenced by multiple interconnected variables, including daily habits, mental well-being, and prior academic achievement.
 
-### 1. Student Lifestyle Dataset (Kaggle)
+The main motivation of this project is to:
+
+- identify the most influential predictors of academic success,
+- compare different machine learning approaches,
+- analyze how dataset structure affects model performance,
+- better understand relationships between lifestyle and educational outcomes.
+
+---
+
+# Datasets
+
+## 1. Student Lifestyle Dataset (Kaggle)
+
+Dataset Link:  
 https://www.kaggle.com/code/prernapriya52/student-lifestyle-dataset
 
-This dataset includes student-level lifestyle variables such as:
+This dataset contains lifestyle-related student variables such as:
+
 - Study hours
 - Sleep duration
 - Stress level
-- Social and physical activities
+- Social activities
+- Physical activities
 - GPA (target variable)
 
-### 2. Student Performance Dataset (UCI)
+---
+
+## 2. Student Performance Dataset (UCI)
+
+Dataset Link:  
 https://archive.ics.uci.edu/ml/datasets/Student+Performance
 
-This dataset includes academic and demographic variables such as:
+This dataset contains academic and demographic information including:
+
 - Study time
 - Absences
 - Family background
@@ -36,71 +59,135 @@ This dataset includes academic and demographic variables such as:
 - Previous grades (G1, G2)
 - Final grade (G3 - target variable)
 
-> Note: The datasets are analyzed separately and are not merged, as they represent different student populations.
+> Note: The datasets were analyzed separately and were not merged because they represent different student populations and different feature structures.
 
-## Methodology
+---
 
-The project will proceed in the following steps:
+# Project Workflow
+
+The project was completed in the following stages:
 
 1. Data collection and preprocessing  
 2. Exploratory Data Analysis (EDA)  
-3. Hypothesis testing to examine relationships between variables  
-4. Feature selection and feature engineering  
-5. Machine learning model development for GPA prediction  
+3. Hypothesis testing  
+4. Feature engineering and encoding  
+5. Machine learning model development  
 6. Model evaluation and interpretation  
 
-## Exploratory Analysis
+---
 
-Initial exploratory analysis will be conducted to understand:
+# Exploratory Data Analysis
 
-- the distribution of GPA and input variables
-- relationships between sleep, stress, study habits, and GPA
-- correlations among numerical variables
-- possible patterns that can guide feature selection
+EDA was conducted to examine:
 
-## Hypothesis Testing
+- distributions of GPA and input variables,
+- relationships between sleep, stress, study habits, and GPA,
+- correlations among numerical variables,
+- patterns useful for feature selection.
 
-Statistical tests were conducted to validate relationships observed during EDA, including:
+Several visualizations and statistical summaries were generated during this stage.
 
-- Correlation analysis (Pearson)  
-- t-tests  
-- ANOVA  
+---
 
-Key findings:
-- Study hours have a strong positive effect on GPA  
-- Stress level significantly affects GPA  
-- Some variables (e.g., sleep, absences) were not statistically significant
+# Hypothesis Testing
 
-## Machine Learning Models
+Statistical hypothesis testing was applied to validate relationships observed during EDA.
+
+The following methods were used:
+
+- Pearson Correlation Analysis
+- t-tests
+- ANOVA
+
+## Key Findings
+
+- Study hours showed a strong positive relationship with GPA.
+- Stress level significantly affected academic performance.
+- Some variables, such as sleep duration and absences, showed weaker statistical significance.
+
+---
+
+# Machine Learning Models
 
 Three regression models were implemented and compared:
 
-- Linear Regression (baseline)
+- Linear Regression
 - Random Forest Regressor
 - XGBoost Regressor
 
-## Results
+The models were evaluated using:
 
-### Lifestyle Dataset (GPA Prediction)
-- Linear Regression performed best  
-- Indicates mostly linear relationships between variables  
+- MAE (Mean Absolute Error)
+- MSE (Mean Squared Error)
+- R² Score
 
-### Student Performance Dataset (G3 Prediction)
-- Random Forest performed best  
-- Indicates more complex and non-linear relationships  
+---
 
-## Key Insights
+# Results
 
-- Model performance depends on dataset structure  
-- Simpler models can outperform complex ones when relationships are linear  
-- More complex models are beneficial when data contains non-linear patterns  
+## Lifestyle Dataset (GPA Prediction)
 
-This highlights the importance of selecting models based on data characteristics rather than model complexity.
+- Linear Regression achieved the strongest performance.
+- This suggests that relationships within the lifestyle dataset are mostly linear.
 
+## Student Performance Dataset (G3 Prediction)
 
-## Limitations
+- Random Forest achieved the highest R² score.
+- This indicates the presence of more complex and non-linear relationships.
 
-- Datasets represent different student groups  
-- Results may not generalize to all populations  
-- Some datasets are relatively small 
+---
+
+# Key Insights
+
+- Model performance strongly depends on dataset structure.
+- Simpler models can outperform more complex ones when relationships are primarily linear.
+- Non-linear models become more effective when datasets contain more complex interactions between variables.
+
+The findings demonstrate the importance of selecting machine learning models based on data characteristics rather than model complexity alone.
+
+---
+
+# Limitations
+
+- The datasets represent different student populations.
+- Results may not generalize to all educational settings.
+- Some datasets are relatively small.
+- Lifestyle-related variables may contain self-reporting bias.
+
+---
+
+# Future Work
+
+Possible future improvements include:
+
+- using larger datasets,
+- incorporating psychological and socioeconomic indicators,
+- testing deep learning approaches,
+- developing interactive GPA prediction systems.
+
+---
+
+# Requirements
+
+The project was developed using Python and the following libraries:
+
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- xgboost
+- seaborn
+
+---
+
+# AI Usage Disclosure
+
+AI tools such as ChatGPT were used for:
+
+- debugging assistance,
+- code organization,
+- report structuring,
+- writing support.
+
+All analysis, interpretation, and final decisions were reviewed and completed by the author.
 
